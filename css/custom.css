@@ -16,10 +16,10 @@ h6 {font-size: 1.6rem;}
 h1, h2, h3, h4, h5, h6 {font-weight: 600;}
 
 img {
-    width: ; //come back to this//
+    width: ; <!--come back to this-->
     height: auto;
 }
-svg{ 
+svg{
     height: 100%;
     width: 100%;
     fill: currentColor;

@@ -1,10 +1,25 @@
+:root {
+    --bg: #121212; 
+    --lbg: #363636; 
+    --fg: #eaeaea;
+    --acc: #00a600ff; /*come back and pick accent colour*/
+    --head: "Luckiest Guy", serif;
+    --body: "Arial, Helvetica", sans-serif;  /*choose a font from google fonts and come back and change this*/
+}
+    tect-decoration: none;
 html {
     font-size: 62.6%;
 }
 body {
+    height: 98vh; /*i think i messed up here, do i delete this*/
     font-size: 1.6rem;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif';
+    font-family: var(--body) 
+    font-weight: 400; /*come back to this once i choose a font- use the recommended weight*/
     line-height: 1.15;
+}
+body {
+    background: var(--lbg);
+    color: var(--fg);
 }
 h1 {font-size: 3.6rem;}
 h2 {font-size: 2.8rem;}
@@ -14,10 +29,11 @@ h5 {font-size: 1.8rem;}
 h6 {font-size: 1.6rem;}
 
 h1, h2, h3, h4, h5, h6 {font-weight: 600;}
-
+    font-family: "Luckiest Guy", serif;  /*come back to this-choose font i want from google font-then serif*/
+    color: var(--acc);
 img {
-    width: 45; /*come back to this*/
-    height: auto;
+    width: 100%;
+    height: auto; 
 }
 svg {
     height: 100%;
@@ -26,13 +42,14 @@ svg {
     pointer-events: none;
 }
 
-nav {
+nav, footer {
     background-color: #222;
+    color: var(--fg);
     color: #EAEAEA;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 5 /*come back to this*/
+    padding: 1rem 2rem; 
 }
 nav div {
     display: flex;
@@ -41,20 +58,66 @@ nav div {
     align-items: center;
     gap: 2rem;
 }
+.logo h1 {
+    padding-top: 10px;
+    font-size: 2.8rem;
+}
 .links {
     gap: 4rem;
+    font-size: 1.2em;
 }
 nav img {
     height: 6rem;
     width: auto;
 }
-
-
-
-
+main {
+    max-width: 78ww;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.92); /*come back to this, change to how you want*/
+}
+section {
+    display: grid;
+    margin: 3rem auto;
+    grid-gap: 3rem;
+}
+section.odd {
+    grid-template-columns: 8fr 4fr;
+}
+section.even {
+    grid-template-columns: 4fr 8fr;
+}
+div.text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.more-links {
+    color: var(--fg);
+    width: 14rem;
+    padding: 1rem 2rem;
+    box-sizing: content-box;
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 2rem auto;
+    border-radius: 2rem; /*you can choose between .5rem, 50%, 100%*/
+    border: 2px solid var(--fg);
+    transition: all 150ms ease-in;
+}
+.more-links:hover {
+    background: var(--acc);
+}
+/*media Queries*/
 @media screen and (max-width: 768px) {
     nav {
         flex-direction: column;
-        gap: 5; /*come back to this*/
+        gap: 2rem;
+    }
+    section.even, section.odd {
+        grid-template-columns: 1fr;
+    }
+    section.even div.poster {
+        order: -1;
     }
 }

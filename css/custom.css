@@ -6,14 +6,32 @@
     --head: "Luckiest Guy", serif;
     --body: "Arial, Helvetica", sans-serif;  /*choose a font from google fonts and come back and change this*/
 }
-    tect-decoration: none;
+a {
+    text-decoration: none;
+}
+
+a:link {
+    color: inherit;
+}
+
+a:visited {
+    color: inherit;
+}
+
+a:hover {
+    color: var(--acc);
+}
+a:active {
+    color: var(--acc);
+}
+
 html {
     font-size: 62.6%;
 }
 body {
     height: 98vh; /*i think i messed up here, do i delete this*/
     font-size: 1.6rem;
-    font-family: var(--body) 
+    font-family: var(--body); 
     font-weight: 400; /*come back to this once i choose a font- use the recommended weight*/
     line-height: 1.15;
 }
@@ -29,7 +47,7 @@ h5 {font-size: 1.8rem;}
 h6 {font-size: 1.6rem;}
 
 h1, h2, h3, h4, h5, h6 {font-weight: 600;}
-    font-family: "Luckiest Guy", serif;  /*come back to this-choose font i want from google font-then serif*/
+    font-family: "Luckiest Guy", serif; /*come back to this-choose font i want from google font-then serif*/
     color: var(--acc);
 img {
     width: 100%;

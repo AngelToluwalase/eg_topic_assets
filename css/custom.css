@@ -1,10 +1,10 @@
 :root {
-    --bg: #121212; 
-    --lbg: #363636; 
+    --bg: #4a6b65; 
+    --lbg: #92b076; 
     --fg: #eaeaea;
-    --acc: #00a600ff; /*come back and pick accent colour*/
-    --head: "Luckiest Guy", serif;
-    --body: "Arial, Helvetica", sans-serif;  /*choose a font from google fonts and come back and change this*/
+    --acc: rgb(115, 163, 103); /*come back and pick accent colour*/
+    --head: "Rock 3D", system-ui, sans-serif;
+    --body: "Yusei Magic", sans-serif;
 }
 a {
     text-decoration: none;
@@ -28,12 +28,23 @@ a:active {
 html {
     font-size: 62.6%;
 }
+.rock-3d-regular {
+    font-family: "Rock 3D", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+.yusei-magic-regular {
+    font-family: "Yusei Magic", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
 body {
-    height: 98vh; /*i think i messed up here, do i delete this*/
-    font-size: 1.6rem;
-    font-family: var(--body); 
-    font-weight: 400; /*come back to this once i choose a font- use the recommended weight*/
-    line-height: 1.15;
+        height: 98vh; /*i think i messed up here, do i delete this*/
+        font-size: 1.6rem;
+        font-family: var(--body); 
+        font-weight: 400; /*come back to this once i choose a font- use the recommended weight*/
+        line-height: 1.15;
 }
 body {
     background: var(--lbg);
@@ -46,9 +57,11 @@ h4 {font-size: 2rem;}
 h5 {font-size: 1.8rem;}
 h6 {font-size: 1.6rem;}
 
-h1, h2, h3, h4, h5, h6 {font-weight: 600;}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
     font-family: "Luckiest Guy", serif; /*come back to this-choose font i want from google font-then serif*/
     color: var(--acc);
+}
 img {
     width: 100%;
     height: auto; 
@@ -61,7 +74,7 @@ svg {
 }
 
 nav, footer {
-    background-color: #222;
+    background-color: #3f2525; /*change header and footer color*/
     color: var(--fg);
     color: #EAEAEA;
     display: flex;
@@ -89,17 +102,57 @@ nav img {
     width: auto;
 }
 main {
-    max-width: 78ww;
+    max-width: 78vw;
     margin: auto;
-    background: rgba(255, 255, 255, 0.92); /*come back to this, change to how you want*/
+    background: var(--bg);/* rgba(255, 255, 255, 0.92); */ /*come back to this, change to how you want*/
+}
+blockquote {
+    font-size: 3.6rem;
+    max-width: 33vw;
+    font-family: var(--head);
+    margin: auto;
+}
+figure {
+    border: 1px dashed white;
+}
+.cite {
+    font-family: var(--body);
+    margin-top: 0;
+    font-size: 1.6rem;
+    text-align: right;
+    display: inline-block;
+    width: 100%;
+}
+.quote {
+    background: var(--bg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0 4rem 0; /*0 0 4rem 0; this is what is was origianlly incase changes do not work*/
+    margin: 3rem auto;
+    outline: 2px dashed var(--fg);
+    outline-offset: -2rem;
+}
+blockquote:before {
+    content: '"';
+    font-family: serif;
+    font-weight: bolder;
+    font-size: 8rem;
+    position: relative;
+    left: -5vw;
+    top: 6vh;
+    color: var(--acc);
 }
 section {
     display: grid;
     margin: 3rem auto;
     grid-gap: 3rem;
+    padding: 2rem;
 }
 section.odd {
     grid-template-columns: 8fr 4fr;
+    outline: 2px solid var(--fg); /*this makes the picture areas dashed but not the actual pictures themeselves*/
 }
 section.even {
     grid-template-columns: 4fr 8fr;
@@ -131,11 +184,11 @@ div.text {
     nav {
         flex-direction: column;
         gap: 2rem;
-    }
+}
     section.even, section.odd {
         grid-template-columns: 1fr;
-    }
+}
     section.even div.poster {
         order: -1;
-    }
+}
 }

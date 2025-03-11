@@ -130,7 +130,7 @@ figure {
     justify-content: center;
     align-items: center;
     padding: 0 0 4rem 0; /*0 0 4rem 0; this is what is was origianlly incase changes do not work*/
-    margin: 3rem auto;
+    margin: 3rem auto; /*3rem auto; original*/
     outline: 2px dashed var(--fg);
     outline-offset: -2rem;
 }

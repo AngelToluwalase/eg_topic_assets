@@ -74,7 +74,7 @@ svg {
 }
 
 nav, footer {
-    background-color: #3f2525; /*change header and footer color*/
+    background-color: #572c2c; /*change header and footer color*/
     color: var(--fg);
     color: #EAEAEA;
     display: flex;

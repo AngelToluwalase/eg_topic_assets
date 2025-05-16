@@ -192,3 +192,24 @@ div.text {
         order: -1;
 }
 }
+.slideshow {
+    position: relative;
+    max-width: 100%;
+    height: auto;
+    margin: 2rem auto;
+    overflow: hidden;
+}
+.slide {
+    display: none;
+    width: 100%;
+    animation: fade 1.5s ease-in-out;
+}
+.slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+}
+@keyframes fade {
+    from {opacity: 0.3}
+    to {opacity: 1}
+}
